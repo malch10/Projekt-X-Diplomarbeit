@@ -23,7 +23,7 @@ df_t_list = df_t.iloc[:, 0].tolist()
 df_list = pd.DataFrame(columns=df_x_list)
 
 
-print(df_list)
+#print(df_list)
 
 
 
@@ -40,10 +40,13 @@ for dateiname in os.listdir(ordner_pfad):
         # Für andere Trennzeichen, ändern Sie das 'sep' Argument entsprechend
         df = pd.read_csv(datei_pfad, delimiter='  ', engine='python')
         # Fügen Sie den DataFrame zur Liste hinzu
+        df = pd.DataFrame(columns=df_y_list)
 
+        print (df)
 
+        melted_df = df.reset_index().melt(id_vars='index')
 
-        print(df)
+        print(melted_df)
 
 
 
