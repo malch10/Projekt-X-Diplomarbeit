@@ -1,23 +1,32 @@
 import pandas as pd
+import glob
 
 Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/I7000_F9000'
 
-data = pd.read_csv(Pfad + '/exportierte_data.txt', sep=',' , index_col = 0)
+
+valu_dateien = glob.glob(Pfad + '/*_exportierte_data.txt')
 
 
-data.columns = ['X-Koordinate','Y-Koordinate','Temperatur']
+for datei in valu_dateien:
+    data = pd.read_csv(datei, sep=',')
 
 
-print(data)
+    data.columns = ['X-Koordinate','Y-Koordinate','Temperatur']
 
-anzahl_vorkommen = (data['X-Koordinate'] == 0.003).sum()
 
-#print(f'Die Anzahl an ist {anzahl_vorkommen}')
+    print(data)
 
-#print(data['X-Koordinate'].value_counts())
+    #anzahl_vorkommen = (data['X-Koordinate'] == 0.003).sum()
 
-#print(data.describe())
+    #print(f'Die Anzahl an ist {anzahl_vorkommen}')
 
-data = data.drop(0)
+    #print(data['X-Koordinate'].value_counts())
 
-print(data)
+    #print(data.describe())
+
+    data = data.drop(0)
+    print(data)
+    csv_dateiname = datei.replace('_exportierte_data.txt', '_finish_data.txt')
+    data.to_csv(csv_dateiname, index=False)
+
+
