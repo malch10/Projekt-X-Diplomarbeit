@@ -70,3 +70,4 @@ duration = end_time - start_time
 
 print(f"Die Ausführungszeit betrug {duration} Sekunden.")
 
+sdfsdgit pu
