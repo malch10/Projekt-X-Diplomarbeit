@@ -29,9 +29,7 @@ print(data.iloc[0])
 data = data.reset_index()
 
 
-
-
-# Angenommen, Ihr DataFrame heißt 'data'
+# Info_array erstellen um Daten zu speichern
 info_array = pd.DataFrame(columns=['Zeilenname', 'Spaltenname', 'Wert'])
 
 
@@ -49,12 +47,14 @@ for index, row in data.iterrows():
         info_array = pd.concat([info_array, temp_df], ignore_index=True)
 
 
+# Angenommener Dateiname für die CSV-Datei
 csv_dateiname = Pfad + '/exportierte_data.txt'
+# Exportiere den DataFrame in eine CSV-Datei
 info_array.to_csv(csv_dateiname, index=True)
 
 
 print(info_array,info_array.shape)
-# Angenommener Dateiname für die CSV-Datei
 
 
-# Exportiere den DataFrame in eine CSV-Datei
+
+
