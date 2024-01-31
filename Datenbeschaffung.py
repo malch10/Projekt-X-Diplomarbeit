@@ -67,6 +67,8 @@
 #
 import pandas as pd
 import glob
+import os
+import re
 
 Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/I7000_F9000'
 
@@ -79,7 +81,20 @@ column_names = pd.read_csv(Pfad + '/TPath_coorY.txt', header=None).squeeze()
 for datei in valu_dateien:
 
     # Lese die Hauptdaten
-    data = pd.read_csv(datei, sep='  ', header=None)
+    data = pd.read_csv(datei, sep='\s+', header=None)
+
+    # Zeit extrahieren
+    Zeitpunkt = os.path.basename(datei).split('_')[1]
+    Zeitpunkt = int(Zeitpunkt)
+
+    Ordnername = re.findall(r'\d+', Pfad)
+
+    # Konvertiere die gefundenen Zahlen in Integer
+    Strom = int(Ordnername[0])
+    Kraft = int(Ordnername[1])
+
+    #print(Strom,Kraft,Zeitpunkt)
+
 
     # Setze Spaltennamen und Index
     data.columns = column_names
@@ -88,14 +103,18 @@ for datei in valu_dateien:
     data = data.reset_index()
 
     # Info_array erstellen um Daten zu speichern
-    info_array = pd.DataFrame(columns=['Zeilenname', 'Spaltenname', 'Wert'])
+    info_array = pd.DataFrame(columns=['Zeilenname', 'Spaltenname', 'Wert', 'Wert1', 'Wert2', 'Wert3'])
 
-    # Definieren Sie die process_cell-Funktion (wie bereits definiert)
+    # Definieren Sie die process_cell-Funktion
     def process_cell(row):
         row_df = pd.DataFrame({
             'Zeilenname': row.name,
             'Spaltenname': row.index,
-            'Wert': row.values
+            'Wert': Zeitpunkt,
+            'Wert1': Strom,
+            'Wert2': Kraft,
+            'Wert3': row.values,
+
         })
         return row_df
 

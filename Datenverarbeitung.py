@@ -11,7 +11,7 @@ for datei in valu_dateien:
     data = pd.read_csv(datei, sep=',')
 
 
-    data.columns = ['X-Koordinate','Y-Koordinate','Temperatur']
+    data.columns = ['X-Koordinate','Y-Koordinate','Zeitpunkt','Strom','Kraft','Temperatur']
 
 
     print(data)
