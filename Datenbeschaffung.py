@@ -57,11 +57,11 @@ for datei in valu_dateien:
     # Anwenden der Funktion und Konkatenation der Ergebnisse
     info_array = pd.concat([process_cell(data.iloc[i]) for i in range(len(data))]).reset_index(drop=True)
 
-    # Exportiere den DataFrame in eine CSV-Datei
-    csv_dateiname = datei.replace('_valu.txt', '_exportierte_data.pkl')
-    info_array.to_pickle(csv_dateiname)
+    # Exportiere den DataFrame in eine PKL-Datei
+    pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data.pkl')
+    info_array.to_pickle(pkl_dateiname)
 
-    print(f'Datei {csv_dateiname} wurde erfolgreich exportiert.')
+    print(f'Datei {pkl_dateiname} wurde erfolgreich exportiert.')
 
 end_time = time.time()
 

@@ -15,12 +15,12 @@ for datei in valu_dateien:
     #print(f'Die Anzahl an ist {anzahl_vorkommen}')
     #print(data['X-Koordinate'].value_counts())
     #print(data.describe())
-
-    data = data.drop(0)
     print(data)
+    #data = data.drop(0)
 
-    csv_dateiname = datei.replace('_exportierte_data.txt', '_finish_data.pkl')
-    data.to_pickle(csv_dateiname)
+
+    pkl_dateiname = datei.replace('_exportierte_data.pkl', '_finish_data.pkl')
+    data.to_pickle(pkl_dateiname)
 
 end_time = time.time()
 
