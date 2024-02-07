@@ -5,7 +5,7 @@ import time
 start_time = time.time()
 Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/I7000_F9000'
 
-valu_dateien = glob.glob(Pfad + '/*_exportierte_data.pkl')
+valu_dateien = glob.glob(Pfad + '/*_exportierte_data2.pkl')
 
 for datei in valu_dateien:
     data = pd.read_pickle(datei)
@@ -18,8 +18,9 @@ for datei in valu_dateien:
     print(data)
     #data = data.drop(0)
 
+    print(data.describe())
 
-    pkl_dateiname = datei.replace('_exportierte_data.pkl', '_finish_data.pkl')
+    pkl_dateiname = datei.replace('_exportierte_data2.pkl', '_finish_data2.pkl')
     data.to_pickle(pkl_dateiname)
 
 end_time = time.time()
