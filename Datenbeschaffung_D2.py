@@ -60,7 +60,7 @@ for datei in valu_dateien:
 
 
     # Exportiere den DataFrame in eine PKL-Datei
-    pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data2.pkl')
+    pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data_D2.pkl')
     info_array.to_pickle(pkl_dateiname)
 
     print(f'Datei {pkl_dateiname} wurde erfolgreich exportiert.')
