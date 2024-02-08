@@ -11,18 +11,14 @@ for datei in valu_dateien:
     data = pd.read_pickle(datei)
     data.columns = ['X-Koordinate','Y-Koordinate','Zeitpunkt','Strom','Kraft','Temperatur']
 
-    #anzahl_vorkommen = (data['X-Koordinate'] == 0.003).sum()
-    #print(f'Die Anzahl an ist {anzahl_vorkommen}')
-    #print(data['X-Koordinate'].value_counts())
-    #print(data.describe())
-    print(data)
-    #data = data.drop(0)
-
-    print(data.describe())
-
-    pkl_dateiname = datei.replace('_exportierte_data2.pkl', '_finish_data2.pkl')
+    # Temperaturen entfernen, welche kleiner als Zimmertemperatur sind
+    filtered_values = data.loc[data['Temperatur'] < 290, 'Temperatur']
+    pkl_dateiname = datei.replace('_exportierte_data2.pkl', '_finish_dat2.pkl')
     data.to_pickle(pkl_dateiname)
-
+    data = data.drop(filtered_values.index)
+    data.reset_index(drop=True, inplace=True)
+    print(data)
+    print(f' Filtered: {filtered_values.count()}')
 end_time = time.time()
 
 # Berechne die Dauer

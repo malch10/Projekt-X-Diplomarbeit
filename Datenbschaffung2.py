@@ -37,8 +37,6 @@ for datei in valu_dateien:
     data.columns = column_names
     data.index = index_names
 
-    #data = data.reset_index()
-
     # Info_array erstellen um Daten zu speichern
     info_array = pd.DataFrame(columns=['Zeilenname', 'Spaltenname', 'Wert', 'Wert1', 'Wert2', 'Wert3'])
 
@@ -56,19 +54,19 @@ for datei in valu_dateien:
 
     # Anwenden der Funktion und Konkatenation der Ergebnisse
     info_array = pd.concat([process_cell(data.iloc[i]) for i in range(len(data))]).reset_index(drop=True)
-    print(info_array, info_array.describe())
-    min_index = info_array["Wert3"].idxmin()
-    print(info_array.loc[min_index])
+    # print(info_array, info_array.describe())
+    # min_index = info_array["Wert3"].idxmin()
+    # print(info_array.loc[min_index])
 
 
     # Exportiere den DataFrame in eine PKL-Datei
-#     pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data2.pkl')
-#     info_array.to_pickle(pkl_dateiname)
-#
-#     print(f'Datei {pkl_dateiname} wurde erfolgreich exportiert.')
-#
-# end_time = time.time()
-#
-# # Berechne die Dauer
-# duration = end_time - start_time
-# print(f"Die Ausführungszeit betrug {duration} Sekunden.")
+    pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data2.pkl')
+    info_array.to_pickle(pkl_dateiname)
+
+    print(f'Datei {pkl_dateiname} wurde erfolgreich exportiert.')
+
+end_time = time.time()
+
+# Berechne die Dauer
+duration = end_time - start_time
+print(f"Die Ausführungszeit betrug {duration} Sekunden.")
