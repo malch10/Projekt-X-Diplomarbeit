@@ -40,7 +40,7 @@ for root, dirs, files in os.walk(basis_pfad):
 
             Zeitpunkt = os.path.basename(datei).split('_')[1]
             Zeitpunkt = int(Zeitpunkt)
-
+            print(Zeitpunkt)
             # Strom und Kraft aus Ordnernamen extrahieren
             Ordnername = re.findall(r'\d+', Pfad)
             Strom = int(Ordnername[0])
