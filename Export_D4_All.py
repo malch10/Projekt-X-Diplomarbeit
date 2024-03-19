@@ -76,6 +76,8 @@ for root, dirs, files in os.walk(basis_pfad):
 
             # Exportiere den DataFrame in eine PKL-Datei
             pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data_D4.pkl')
+            pkl_dateiname = pkl_dateiname.replace('TempPSim'+dir_wo, 'TPath'+dir_wo)
+
             info_array.to_pickle(pkl_dateiname)
 
             print(f'Datei {pkl_dateiname} wurde erfolgreich exportiert.')

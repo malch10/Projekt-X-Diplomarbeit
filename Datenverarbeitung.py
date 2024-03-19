@@ -3,12 +3,15 @@ import glob
 import pickle
 import time
 start_time = time.time()
-Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/I7000_F9000'
+
+
+
+pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_t_I_F'
 
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D1.pkl')
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D2.pkl')
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D3.pkl')
-valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D4.pkl')
+valu_dateien = glob.glob(pfad + '/*_exportierte_data_D4.pkl')
 
 
 for datei in valu_dateien:
