@@ -9,7 +9,7 @@ def sort_files_by_number(files):
     def extract_number(file_name):
         # Finde alle Zahlen im Dateinamen und gebe die erste gefundene Zahl zurück
         numbers = re.findall(r'\d+', file_name)
-        return int(numbers[0]) if numbers else 0
+        return int(numbers[2]) if numbers else 0
 
     files.sort(key=extract_number)
 
@@ -45,8 +45,8 @@ def load_and_combine_pkl_files(folder_path):
 
 
 # Pfad zum Ordner mit den .pkl-Dateien (anpassen nach Bedarf)
-folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D4_I7000_F9000'
-save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D4_t_I7000_F9000/D4_t.pkl'
+folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_I9000_F5000'
+save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/D4_t_I9000_F5000.pkl'
 
 # Funktion aufrufen und das Ergebnis in 'result_df' speichern
 result_df = load_and_combine_pkl_files(folder_path)

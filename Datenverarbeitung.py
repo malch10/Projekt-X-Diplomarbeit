@@ -6,7 +6,7 @@ start_time = time.time()
 
 
 
-pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_t_I_F'
+pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_I6000_F5000'
 
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D1.pkl')
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D2.pkl')
