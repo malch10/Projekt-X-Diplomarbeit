@@ -6,12 +6,12 @@ start_time = time.time()
 
 
 
-pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_I6000_F5000'
+pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Ausgangsdaten/I6000_F5000'
 
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D1.pkl')
 #valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D2.pkl')
-#valu_dateien = glob.glob(Pfad + '/*_exportierte_data_D3.pkl')
-valu_dateien = glob.glob(pfad + '/*_exportierte_data_D4.pkl')
+valu_dateien = glob.glob(pfad + '/*_exportierte_data_D3.pkl')
+#valu_dateien = glob.glob(pfad + '/*_exportierte_data_D4.pkl')
 
 
 for datei in valu_dateien:
@@ -28,8 +28,8 @@ for datei in valu_dateien:
     print(f' Filtered: {filtered_Radius.count()}')
     #pkl_dateiname = datei.replace('_exportierte_data_D1.pkl', '_finish_data_D1.pkl')
     #pkl_dateiname = datei.replace('_exportierte_data_D2.pkl', '_finish_data_D2.pkl')
-    #pkl_dateiname = datei.replace('_exportierte_data_D3.pkl', '_finish_data_D3.pkl')
-    pkl_dateiname = datei.replace('_exportierte_data_D4.pkl', '_finish_data_D4.pkl')
+    pkl_dateiname = datei.replace('_exportierte_data_D3.pkl', '_finish_data_D3.pkl')
+    #pkl_dateiname = datei.replace('_exportierte_data_D4.pkl', '_finish_data_D4.pkl')
 
     data.to_pickle(pkl_dateiname)
 

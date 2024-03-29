@@ -7,7 +7,7 @@ import pickle
 
 start_time = time.time()
 # Pfad zum Dateiordner
-Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Ausgangsdaten/I7000_F9000'
+Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Vorhersage/I8000_F5000'
 
 # Finde alle Dateien, die auf '_valu.txt' enden
 valu_dateien = glob.glob(Pfad + '/*_valu.txt')

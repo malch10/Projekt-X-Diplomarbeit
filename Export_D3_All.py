@@ -8,41 +8,38 @@ import pickle
 start_time = time.time()
 # Pfad zum Dateiordner
 
-basis_pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Vorhersage'
+basis_pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Ausgangsdaten'
 
 # Durchlaufe alle Unterordner in 'Daten'
 for root, dirs, files in os.walk(basis_pfad):
     for dir in dirs:
-        Pfad = os.path.join(root, dir)
-        Pfad = Pfad.replace('\\','/')
-        print(Pfad)
-        print("Versuche, die Datei zu öffnen:", Pfad + '/TempPSim' + dir + '_coorX.txt')
+        pfad = os.path.join(root, dir)
+        pfad = pfad.replace('\\', '/')
+        print(pfad)
+        print("Versuche, die Datei zu öffnen:", pfad + '/TempPSim' + dir + '_coorX.txt')
 
         dir_wo = dir.replace('_', '')
 
-        # Zeile und Spalten festlegen (Nur jede zweite Zeile/Spalte einlesen)
-        index_names = pd.read_csv(Pfad + '/TempPSim' +dir_wo+ '_coorX.txt', header=None).squeeze()[::12]
-        column_names = pd.read_csv(Pfad + '/TempPSim' +dir_wo+ '_coorY.txt', header=None).squeeze()[::8]
+        #Einlesen der richtigen Zeilen- und Spaltenabstände für die Koordinaten
+        index_names = pd.read_csv(pfad + '/TempPSim' + dir_wo + '_coorX.txt', header=None).squeeze()[::4]
+        column_names = pd.read_csv(pfad + '/TempPSim' + dir_wo + '_coorY.txt', header=None).squeeze()[::4]
 
         print(column_names)
         print(index_names)
 
-        valu_dateien = glob.glob(Pfad + '/*_valu.txt')
+        valu_dateien = glob.glob(pfad + '/*_valu.txt')
 
         for datei in valu_dateien:
-            # Lese die Hauptdaten, nur jede zweite Zeile und Spalte
-
-            skiprows = [x for x in range(1, 400) if x % 12 != 0]
-
-            # Lese die Datei, überspringe die bestimmten Zeilen und wähle jede vierte Spalte
-            data = pd.read_csv(datei, sep='\s+', header=None, skiprows=skiprows).iloc[:, ::8]
+            # Einlesen der richtigen Zeilen- und Spaltenabstände für die Temperaturen
+            skiprows = [x for x in range(1, 400) if x % 4 != 0]
+            data = pd.read_csv(datei, sep='\s+', header=None, skiprows=skiprows).iloc[:, ::4]
 
 
             Zeitpunkt = os.path.basename(datei).split('_')[1]
             Zeitpunkt = int(Zeitpunkt)
             print(Zeitpunkt)
             # Strom und Kraft aus Ordnernamen extrahieren
-            Ordnername = re.findall(r'\d+', Pfad)
+            Ordnername = re.findall(r'\d+', pfad)
             Strom = int(Ordnername[0])
             Kraft = int(Ordnername[1])
 
@@ -75,7 +72,7 @@ for root, dirs, files in os.walk(basis_pfad):
 
 
             # Exportiere den DataFrame in eine PKL-Datei
-            pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data_D4.pkl')
+            pkl_dateiname = datei.replace('_valu.txt', '_exportierte_data_D3.pkl')
             pkl_dateiname = pkl_dateiname.replace('TempPSim'+dir_wo, 'TPath'+dir_wo)
 
             info_array.to_pickle(pkl_dateiname)

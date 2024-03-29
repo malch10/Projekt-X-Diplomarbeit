@@ -24,7 +24,7 @@ def load_and_combine_pkl_files(folder_path):
     # Sortiere die Dateien nach Zahlen, die in den Dateinamen enthalten sind
     sort_files_by_number(pkl_files)
 
-    # Berücksichtige nur die hundertste Datei und jede zweite Datei danach
+    # Berücksichtige nur die hundertste Datei und jede zehnte Datei danach
     relevant_files = pkl_files[99::10]  # Beachte: Die Zählung beginnt bei 0
 
     # Durchlaufe die ausgewählten Dateien
@@ -45,8 +45,8 @@ def load_and_combine_pkl_files(folder_path):
 
 
 # Pfad zum Ordner mit den .pkl-Dateien (anpassen nach Bedarf)
-folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_I9000_F5000'
-save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/D4_t_I9000_F5000.pkl'
+folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D3_I6000_F5000'
+save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/D3_t_I6000_F5000.pkl'
 
 # Funktion aufrufen und das Ergebnis in 'result_df' speichern
 result_df = load_and_combine_pkl_files(folder_path)

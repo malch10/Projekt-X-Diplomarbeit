@@ -7,14 +7,14 @@ import pickle
 
 start_time = time.time()
 # Pfad zum Dateiordner
-Pfad = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/I7000_F9000'
+path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Ausgangsdaten/I9000_F5000'
 
 # Finde alle Dateien, die auf '_valu.txt' enden
-valu_dateien = glob.glob(Pfad + '/*_valu.txt')
+valu_dateien = glob.glob(path + '/*_valu.txt')
 
 # Zeile und Spalten festlegen (Nur jede zweite Zeile/Spalte einlesen)
-index_names = pd.read_csv(Pfad + '/TPath_coorX.txt', header=None).squeeze()[::4]
-column_names = pd.read_csv(Pfad + '/TPath_coorY.txt', header=None).squeeze()[::4]
+index_names = pd.read_csv(path + '/TPath_coorX.txt', header=None).squeeze()[::4]
+column_names = pd.read_csv(path + '/TPath_coorY.txt', header=None).squeeze()[::4]
 
 print(column_names)
 print(index_names)
@@ -37,7 +37,7 @@ for datei in valu_dateien:
     Zeitpunkt = int(Zeitpunkt)
 
     # Strom und Kraft aus Ordnernamen extrahieren
-    Ordnername = re.findall(r'\d+', Pfad)
+    Ordnername = re.findall(r'\d+', path)
     Strom = int(Ordnername[0])
     Kraft = int(Ordnername[1])
 

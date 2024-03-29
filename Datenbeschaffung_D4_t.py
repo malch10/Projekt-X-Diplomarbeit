@@ -45,8 +45,8 @@ def load_and_combine_pkl_files(folder_path):
 
 
 # Pfad zum Ordner mit den .pkl-Dateien (anpassen nach Bedarf)
-folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D4_I7000_F9000'
-save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D4_t_I7000_F9000/D4_t.pkl'
+folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Vorhersage/I8000_F5000'
+save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Vorhersage/D4_t_Vorhersage.pkl'
 
 # Funktion aufrufen und das Ergebnis in 'result_df' speichern
 result_df = load_and_combine_pkl_files(folder_path)
