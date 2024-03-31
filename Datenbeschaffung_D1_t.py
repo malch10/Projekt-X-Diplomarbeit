@@ -9,7 +9,7 @@ def sort_files_by_number(files):
     def extract_number(file_name):
         # Finde alle Zahlen im Dateinamen und gebe die erste gefundene Zahl zurück
         numbers = re.findall(r'\d+', file_name)
-        return int(numbers[0]) if numbers else 0
+        return int(numbers[2]) if numbers else 0  # Angeben an welcher Nummer die wichtige Zahl für die Sortierung steht
 
     files.sort(key=extract_number)
 
@@ -24,9 +24,9 @@ def load_and_combine_pkl_files(folder_path):
     # Sortiere die Dateien nach Zahlen, die in den Dateinamen enthalten sind
     sort_files_by_number(pkl_files)
 
-    # Berücksichtige nur die hundertste Datei und jede zweite Datei danach
-    relevant_files = pkl_files[99::10]  # Beachte: Die Zählung beginnt bei 0
 
+    relevant_files = pkl_files[99::10]  # Beachte: Die Zählung beginnt bei 0
+    print(relevant_files)
     # Durchlaufe die ausgewählten Dateien
     for filename in relevant_files:
         file_path = os.path.join(folder_path, filename)
@@ -45,8 +45,8 @@ def load_and_combine_pkl_files(folder_path):
 
 
 # Pfad zum Ordner mit den .pkl-Dateien (anpassen nach Bedarf)
-folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D1_I7000_F9000'
-save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish_D1_t_I7000_F9000/D1_t.pkl'
+folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D1_I9000_F5000'
+save_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D1_t_I_F_PKL/D1_I9000_F5000.pkl'
 
 # Funktion aufrufen und das Ergebnis in 'result_df' speichern
 result_df = load_and_combine_pkl_files(folder_path)
