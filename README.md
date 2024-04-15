@@ -2,12 +2,12 @@
 
 ## Beschreibung des Projekts
 
-In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwednung im Bereich von FE-Simulationen beschäftigt.
+In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwendung im Bereich von FE-Simulationen beschäftigt.
 Die Hauptaufgabe besteht darin, ein ML-Modell zu erstellen, das effizient und genau vorhersagen kann, ob ein Schweißpunkt gelingt oder nicht.
 
 ## Ausgangsdaten
 
-Die Ausgangsdaten sind Textdateien, welche die Temperaturverteilung in der Fügezone (ROI) beschreiben. Die Daten stammen aus FE-Simulationen und geben an Knotenpuntken die Temperatur zu einem bestimmten Zeitpunkt an. Die Abstände zwischen dein einzelnen Knotenpunkten betragen 0,01mm in X- und Y-Richtung. 
+Die Ausgangsdaten sind Textdateien, welche die Temperaturverteilung in der Fügezone (ROI) beschreiben. Die Daten stammen aus FE-Simulationen und geben an Knotenpunkten die Temperatur zu einem bestimmten Zeitpunkt an. Die Abstände zwischen dein einzelnen Knotenpunkten betragen 0,01mm in X- und Y-Richtung. 
 Eine Simulationsdatei beschreibt einen Zeitpunkt. Wiederum mehrere Zeitpunkte beschreiben den Schweißprozess.
 
 ## Datenvorverarbeitung 
@@ -18,7 +18,7 @@ Datenbeschaffung_D1-D4:
 
 - erstellt Datenpakete mit absteigender Auflösung der ROI 
 - die Textdateien werden als 'exportierte_data' gespeichert
--  Bsp. Syntax: TPath_100_valu.txt
+- Bsp. Syntax: TPath_100_valu.txt
 
 Datenverarbeitung:
 
