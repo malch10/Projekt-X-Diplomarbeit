@@ -19,13 +19,13 @@ for datei in valu_dateien:
     data.columns = ['X-Koordinate','Y-Koordinate','Zeitpunkt','Strom','Kraft','Temperatur']
 
 
+    # Verkürzen des Radius, wegen Simulationsfehler
+    filtered_radius = data.loc[data['X-Koordinate'] > 0.0025, 'X-Koordinate']
 
-    filtered_Radius = data.loc[data['X-Koordinate'] > 0.0025, 'X-Koordinate']
-
-    data = data.drop(filtered_Radius.index)
+    data = data.drop(filtered_radius.index)
     data.reset_index(drop=True, inplace=True)
     print(data)
-    print(f' Filtered: {filtered_Radius.count()}')
+    print(f' Filtered: {filtered_radius.count()}')
     pkl_dateiname = datei.replace('_exportierte_data_D1.pkl', '_finish_data_D1.pkl')
     #pkl_dateiname = datei.replace('_exportierte_data_D2.pkl', '_finish_data_D2.pkl')
     #pkl_dateiname = datei.replace('_exportierte_data_D3.pkl', '_finish_data_D3.pkl')

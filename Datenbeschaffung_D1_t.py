@@ -26,6 +26,7 @@ def load_and_combine_pkl_files(folder_path):
 
 
     relevant_files = pkl_files[99::10]  # Beachte: Die Zählung beginnt bei 0
+    # ALle Zeitpunkte ab 100 mit 10 Abstand
     print(relevant_files)
     # Durchlaufe die ausgewählten Dateien
     for filename in relevant_files:
