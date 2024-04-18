@@ -2,17 +2,16 @@
 
 ## Beschreibung des Projekts
 
-In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwednung im Bereich von FE-Simulationen beschäftigt.
+In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwendung im Bereich von FE-Simulationen beschäftigt.
 Die Hauptaufgabe besteht darin, ein ML-Modell zu erstellen, das effizient und genau vorhersagen kann, ob ein Schweißpunkt gelingt oder nicht.
 
 ## Ausgangsdaten
 
-Die Ausgangsdaten sind Textdateien, welche die Temperaturverteilung in der Fügezone (ROI) beschreiben. Die Daten stammen aus FE-Simulationen und geben an Knotenpuntken die Temperatur zu einem bestimmten Zeitpunkt an. Die Abstände zwischen dein einzelnen Knotenpunkten betragen 0,01mm in X- und Y-Richtung. 
-Eine Simulationsdatei beschreibt einen Zeitpunkt. Wiederum mehrere Zeitpunkte beschreiben den Schweißprozess.
-
+Die Ausgangsdaten sind Textdateien, die die Temperaturverteilung in der Fügezone (ROI) beschreiben. Die Daten basieren auf validierten Finite-Element-Simulationen. Eine Ausgangsdatei ist eine TXT-Datei und beschreibt einen Zeitpunkt mit einem Temperaturfeld. 
+Mehrere Zeitpunkte ergeben zusammengefasst den Schweißprozess.
 ## Datenvorverarbeitung 
 
-Für die Datenvorverarbeitung werden die Daten der FE-Simulationen für den jeweiligen Anendungsfall vorbereitet. Die Programme der 'Datenbeschaffung' befassen sich mit der Vorbereitung. 
+Für die Datenvorverarbeitung werden die Daten der FE-Simulationen für den jeweiligen Anwendungsfall vorbereitet. Die Programme der 'Datenbeschaffung' befassen sich mit der Vorbereitung. 
 
 Datenbeschaffung_D1-D4:
 
@@ -31,7 +30,7 @@ Datenbeschaffung_D1_t-D4_t:
 
 Export_D1_ALL-D4_ALL:
 
-- durch die Änderung in der Datenbereitstellung musst eine abgewandelte Form von 'Datenbeschaffung' entwicklet werden, um auf Syntax-Änderungen einzugehen
+- durch die Änderung in der Datenbereitstellung musste eine abgewandelte Form von 'Datenbeschaffung' entwicklet werden, um auf Syntax-Änderungen einzugehen
 - hat die gleich Aufgabe wie die 'Datenbeschaffung'
 - die Textdateien werden als 'exportierte_data' gespeichert
 - Bsp. Syntax: TempPSimI7000F6000_4_valu.txt
@@ -108,27 +107,21 @@ Visualisierung wird genutzt um die Fügezone (ROI) abzubilden und darzustellen.
 
 ## Vorgehen bei der Erstellung neuronaler Netze für das jeweilige Datenpaket
 
-- Vorverarbeitung der Daten (Feature Extraction, Feature Scaling, Datenbereinigung)
+- Vorverarbeitung der Daten (Feature Extraction, Feature Scaling, Datenbereinigung usw.)
 - Erstellung einfach neuronaler Netze (Shallow Neural Network)
-- Gefühl für Daten und Anforderungen erhalten
+- Daten und Anforderungen verstehen
 - Random Search Modellarchitektur finden (Rahmen festlegen in dem Architketur gesucht wird)
 - Hyperparameteroptimierung der gefundenen Architekturen durch Grid Search 
 - Kreuzvaliderung auf dem Trainingsdatensatz (Vergleich optinmierter Modelle miteinander, Einschätzung der Modellperformance)
 - Bewertung und Vergleich der erstellten Netze auf dem Testdatensatz (Testdaten sollten Anwendungsfall widerspiegeln)
-- Wiederholung der Netzoptimierung bis erwünschte Genauigkeit erreicht ist
+- Iterativer Verbesserungsprozess
 
 
 ## Verwendete Versionen 
 
-Python 3.11
-Keras 2.15
-Keras-tuner 1.4.6
-Matplotlib 3.8.2
-Pandas 2.2.1
-Scikeras 0.12.0
-Tensorflow 2.15
-Scikit-learn 1.4.0
-Scipy 1.12
-H5py 3.10
+Python 3.11 Keras 2.15 Keras-Tuner 
+1.4.6 Matplotlib 3.8.2 Pandas 2.2.1 
+Scikeras 0.12.0 TensorFlow 2.15 
+Scikit-learn 1.4.0 Scipy 1.12 H5py 3.10
 
 
