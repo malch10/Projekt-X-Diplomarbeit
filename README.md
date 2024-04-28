@@ -2,8 +2,10 @@
 
 ## Beschreibung des Projekts
 
-In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwendung im Bereich von FE-Simulationen beschäftigt.
-Die Hauptaufgabe besteht darin, ein ML-Modell zu erstellen, das effizient und genau vorhersagen kann, ob ein Schweißpunkt gelingt oder nicht.
+In diesem Projekt habe ich mich mit maschinellem Lernen und der Anwendung im Bereich von FE-Simulationen beschäftigt. 
+Die Kombination von maschinellem Lernen und FEM-Simulationen wurde genutzt um Surrogatmodelle zu erstellen, welche die Temperaturverteilung in der Fügezone 
+des Widerstandspunktschweißprozesses vorhersagen können.
+
 
 ## Ausgangsdaten
 
