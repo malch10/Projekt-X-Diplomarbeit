@@ -29,6 +29,6 @@ def combine_pandas_pkl_files(folder_path, output_file_path):
     combined_df.to_pickle(output_file_path)
 
 # Beispielaufruf der Funktion
-folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_t_I_F_PKL'  # Ersetzen Sie dies mit dem Pfad zu Ihrem Ordner
+folder_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_D4_t_I_F_PKL'  # Ordnerpfad
 output_file_path = 'C:/Users/erikm/Desktop/Diplomarbeit Erik Marr/Daten/Finish/Finish_ALL_D4_t_I_F_PKL.pkl'  # Name der kombinierten .pkl-Datei
 combine_pandas_pkl_files(folder_path, output_file_path)

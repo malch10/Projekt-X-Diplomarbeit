@@ -70,32 +70,32 @@ NeuroNetz_D4:
 - Auflösung D4, X-Koordiante, Y-Koordinate; einzelne Temperaturen in der ROI
 - Benutztes Datenpaket: TPath_500_finish_data_D4.pkl
 
-NeuroNetz_D3_I_F:
+NeuroNetz_D3_I_F (High-1):
 
 - Auflösung D3, X-Koordiante, Y-Koordinate, Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt
 - Benutztes Datenpaket: Finish_ALL_D3_500_I_F_PKL.pkl
 
-NeuroNetz_D3_t_9_I_F:
+NeuroNetz_D3_t_9_I_F (High-9):
 
 - Auflösung D3, X-Koordiante, Y-Koordinate, 9 Zeitschritte Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt, Temperaturfelder über die 9 Zeitschritte
 - Benutztes Datenpaket: Finish_ALL_D3_t_9_I_F_PKL.pkl
 
-NeuroNetz_D3_t_21_I_F:
+NeuroNetz_D3_t_21_I_F (High-21):
 
 - Auflösung D3, X-Koordiante, Y-Koordinate, 21 Zeitschritte Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt, Temperaturfelder über die 21 Zeitschritte
 - Benutztes Datenpaket: Finish_ALL_D3_t_21_I_F_PKL.pkl
 
-NeuroNetz_D4_I_F:
+NeuroNetz_D4_I_F (Low-1):
 
 - Auflösung D4, X-Koordiante, Y-Koordinate, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt
 - Benutztes Datenpaket: Finish_ALL_D4_500_I_F_PKL.pkl
 
-NeuroNetz_D4_t_9_I_F:
+NeuroNetz_D4_t_9_I_F (Low-9):
 
 - Auflösung D4, X-Koordiante, Y-Koordinate, 9 Zeitschritte Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt, Temperaturfelder über die 9 Zeitschritte
 - Benutztes Datenpaket: Finish_ALL_D4_t_9_I_F_PKL.pkl
 
-NeuroNetz_D4_t_21_I_F:
+NeuroNetz_D4_t_21_I_F (Low-21):
 
 - Auflösung D4, X-Koordiante, Y-Koordinate, 21 Zeitschritte Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt, Temperaturfelder über die 21 Zeitschritte
 - Benutztes Datenpaket: Finish_ALL_D4_t_21_I_F_PKL.pkl
