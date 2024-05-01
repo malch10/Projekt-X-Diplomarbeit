@@ -74,7 +74,7 @@ NeuroNetz_D4:
 
 NeuroNetz_D3_I_F (High-1):
 
-- Auflösung D3, X-Koordiante, Y-Koordinate, Strom, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt
+- Auflösung D3, X-Koordiante, Y-Koordinate, Strom, Kraft, t = 500 ms; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt (t = 500 ms)
 - Benutztes Datenpaket: Finish_ALL_D3_500_I_F_PKL.pkl
 
 NeuroNetz_D3_t_9_I_F (High-9):
@@ -89,7 +89,7 @@ NeuroNetz_D3_t_21_I_F (High-21):
 
 NeuroNetz_D4_I_F (Low-1):
 
-- Auflösung D4, X-Koordiante, Y-Koordinate, Kraft; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt
+- Auflösung D4, X-Koordiante, Y-Koordinate, Kraft, t = 500 ms; Temperaturfeld einer unbekannten Simulation zu einem bestimmten Zeitpunkt (t = 500 ms)
 - Benutztes Datenpaket: Finish_ALL_D4_500_I_F_PKL.pkl
 
 NeuroNetz_D4_t_9_I_F (Low-9):
